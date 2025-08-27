@@ -17,23 +17,14 @@
                     <BUTTON onClick="parent.toggleRotation();">Rotate</BUTTON>
                     <BUTTON onClick="parent.colourCodeAllPlayers();">Team Colours</BUTTON>
                     <BUTTON onClick="parent.switchBW();">Black & White</BUTTON>
+                    <BUTTON onClick="parent.setLightColouring('pinkblue');">Pink & Blue Light</BUTTON>
+                    <BUTTON onClick="parent.setLightColouring('white');">White Light</BUTTON>
                 </P>
                 <P>
                     <BUTTON onClick="parent.cameraFocus('Tower');">Tower</BUTTON>
                     <BUTTON onClick="parent.cameraFocus('Pomodori');">HMS Pomodori</BUTTON>
                     <BUTTON onClick="parent.cameraFocus('Fortress');">Fortress</BUTTON>
                     <BUTTON onClick="parent.cameraFocus('Factory');">Factory</BUTTON>
-                </P>
-                <P>.:.</P>  
-                <P>TELEMETRY FUNCTIONS</P>
-                <P>
-                    <BUTTON onClick="parent.startAJAX();">Start AJAX()</BUTTON> 
-                    <BUTTON onClick="parent.stopAJAX();">Stop AJAX()</BUTTON>
-                </P>
-                <P>
-                    <BUTTON onClick="parent.startReplay();">Start Replay()</BUTTON> 
-                    <BUTTON onClick="parent.resumeReplay();">Resume Replay()</BUTTON>
-                    <BUTTON onClick="parent.stopReplay();">Stop Replay()</BUTTON>   
                 </P>
                 <P>.:.</P>
                 <P><SPAN ID="debug">2D Floorplan Focus on:</SPAN></P>
@@ -59,6 +50,26 @@
                         </SELECT>
                     </SPAN></P>
                 <P>.:.</P>
+                <P>TRAJECTORY FUNCTIONS</P>
+                <P>                    
+                    <BUTTON onClick="parent.cameraFocus('Course');">Elytra Training Course</BUTTON>                    
+                </P> 
+                <P>
+                    <BUTTON onClick="parent.toggleTracking('points')">Track Points</BUTTON>
+                    <BUTTON onClick="parent.toggleTracking('path')">Track Path</BUTTON>
+                </P>
+                <P>.:.</P>  
+                <P>TELEMETRY FUNCTIONS</P>
+                <P>
+                    <BUTTON onClick="parent.startAJAX();">Start AJAX()</BUTTON> 
+                    <BUTTON onClick="parent.stopAJAX();">Stop AJAX()</BUTTON>
+                </P>
+                <P>
+                    <BUTTON onClick="parent.startReplay();">Start Replay()</BUTTON> 
+                    <BUTTON onClick="parent.resumeReplay();">Resume Replay()</BUTTON>
+                    <BUTTON onClick="parent.stopReplay();">Stop Replay()</BUTTON>   
+                </P>
+                <P>.:.</P>
                 <P>TIME INDEX FUNCTIONS</P>
                 <P>
                     <SPAN ID="timestampDisplay" STYLE="font-size:12pt">UNIX TIME STAMP</SPAN><BR>
@@ -76,6 +87,12 @@
                     <br><input type="text" size="10"><input type="text" id="syncStart2" size="20" placeholder="YYYY.MM.DD hh:mm:ss"> <span id="syncTime2">hh:mm:ss</span>
                     <br><input type="text" size="10"><input type="text" id="syncStart3" size="20" placeholder="YYYY.MM.DD hh:mm:ss"> <span id="syncTime3">hh:mm:ss</span>
                 </P>
+                <P>.:.</P>
+                <P>SAMPLING RATE FUNCTIONS (Telemetry & Replay)</P>
+                <P>
+                    <INPUT TYPE="text" SIZE="4" ID="telemetrySampling"><BUTTON onClick="parent.setSampling('telemetry');">SET</BUTTON>
+                    <INPUT TYPE="text" SIZE="4" ID="replaySampling"><BUTTON onClick="parent.setSampling('replay');">SET</BUTTON>
+                </P>
                 </TD>
 
                 <TD ID="levelsTD" ROWSPAN="2"><SVG WIDTH="20PX" HEIGHT="20PX" ID="levels"></SVG></TD>
@@ -89,6 +106,12 @@
             </TR>
 
         </TABLE>
+
+        <SCRIPT>
+
+            parent.setSampling("");
+
+        </SCRIPT>
 
     </BODY>
 

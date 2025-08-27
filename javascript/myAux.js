@@ -2,19 +2,44 @@ function getScreenRes(){
 	
 	console.log("[myAux.js] getScreenRes(): Your screen resolution is " + window.screen.width + "x" + window.screen.height + " px and your browser window resolution is " + window.innerWidth + "x" + window.innerHeight + " px.");
 
-	if (window.innerWidth / window.innerHeight < 1){
-		
-		myFrame.src = "main_v.html?";
-        console.log("[myAux.js] getScreenRes(): Assigning 'main_v.html' to the iframe.");
-		
-	} else {
-		
-		// myFrame.src = "main_h.html?";
+    if (getURLQueryVariable("video") == 1){
+
         myFrame.src = "video.html?";
-        console.log("[myAux.js] getScreenRes(): Assigning 'main_h.html' to the iframe.");
-		
-	}
+        console.log("[myAux.js] getScreenRes(): Assigning 'video.html' to the iframe.");        
+
+    } else {
+
+        if (window.innerWidth / window.innerHeight < 1){
+            
+            myFrame.src = "main_v.html?";
+            console.log("[myAux.js] getScreenRes(): Assigning 'main_v.html' to the iframe.");
+            
+        } else {
+            
+            myFrame.src = "main_h.html?";
+            console.log("[myAux.js] getScreenRes(): Assigning 'main_h.html' to the iframe.");
+            
+        }
+
+    }
 	
+}
+
+function setSampling(myInput){
+
+    console.log("[myAux.js] setSampling(): Called with parameter '" + myInput + "'.");
+
+    if (myInput == "telemetry"){ telemetryInterval = myFrame.contentWindow.document.getElementById("telemetrySampling").value; }
+
+    if (myInput == "replay"){ replayInterval = myFrame.contentWindow.document.getElementById("replaySampling").value; }
+
+    if (myInput == ""){
+
+        myFrame.contentWindow.document.getElementById("telemetrySampling").value = telemetryInterval;
+        myFrame.contentWindow.document.getElementById("replaySampling").value = replayInterval;
+
+    }
+
 }
 
 function onPointerMove(event){

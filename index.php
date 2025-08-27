@@ -1,7 +1,7 @@
 <HTML>
 
     <HEAD>
-        <TITLE>[MrP] Sepia Tower 3D (v310)</TITLE>
+        <TITLE>[MrP] Sepia Tower 3D (v311)</TITLE>
         <LINK REL="STYLESHEET" HREF="myStyles.css">
 
         <SCRIPT type="text/javascript" src="./javascript/myAux.js"></SCRIPT>
@@ -176,11 +176,13 @@
         // STEP 1b: DELARING VARIABLES FOR CONTROL ELEMENTS
 
         let myTelemetry = null; // this is where we will save the data obtained from the Minecraft server
-        let flagTelemetry = false; // defines whether telemetry data shall be fetched continuously (true) or not (fase)
+        let flagTelemetry = false; // defines whether telemetry data shall be fetched continuously (true) or not (false)
+        let telemetryInterval = 250; // in miliseconds, should be smaller or equal to the sampling rate of the player position tracking plugin on the server (1000 ms)
 
         let flagReplay = false; // this flag sets the replay loop
         let replayIndex = null; // these two variables are integers to track time when displaying recorded data (aka 'replay')
         let replayTime = null;
+        let replayInterval = 967; // instead of 1000 ms delay before the next step is shown, we use the empirically found number of 967 ms as the engine lags about 33 ms for every 1000 ms that elapse
 
         let trackPointsFlag = false;
         let trackPathFlag = false;
@@ -204,6 +206,7 @@
         var selector2D = null; // in this variable we save the selection which player to focus on for the display of the 2D floor map
         var G3D = null; // this group saves indices of blocks added to the scene as children
         var G3Didx = null; // this is where we save the index of the group added to the scene
+        var load2D = 0; // this variable stores the value from 0 to 100 to indicate loading of chunk data
 
         // STEP 2: SETTING UP THE 3D ENGINE
 
@@ -373,10 +376,26 @@
             
             addAllMyTowerBlocks();
 
-            // startAJAX();
-            // colourCodeAllPlayers();
+            if (getURLQueryVariable("ajax") == 1){ startAJAX(); }
+            if (getURLQueryVariable("teams") == 1){ colourCodeAllPlayers(); }
 
             G3D = new THREE.Group();
+
+        }
+
+        function getURLQueryVariable(myVariable){
+
+            var query = window.location.search.substring(1);
+            var variables = query.split("&");
+
+            for (let i = 0; i < variables.length; i++){
+
+                var pair = variables[i].split("=");
+                if (pair[0] == myVariable){ return pair[1]; }
+
+            }
+
+            return(false);
 
         }
 

@@ -351,7 +351,7 @@ function Replay(myIndex, myTime){
                 Replay(replayIndex, replayTime);
                 if (BW == true){ BWRoomTally(); }
 
-            }, 967); // instead of 1000 ms delay before the next step is shown, we use the empirically found number of 967 ms as the engine lags about 33 ms for every 1000 ms that elapse
+            }, replayInterval); 
 
         }
 
@@ -407,7 +407,7 @@ function ajaxGetTelemetry(myTable, myLimit, myMode){
                         ajaxGetTelemetry("whimc_player_positions", myPlayers.length, "live");
                         if (BW == true){ BWRoomTally(); }
                     
-                    }, 1000);
+                    }, telemetryInterval);
             
                 }
 

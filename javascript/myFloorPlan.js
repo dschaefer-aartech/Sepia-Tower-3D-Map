@@ -157,11 +157,25 @@ function displayBlocksOfCertainLevel(flag3D, myLevel, inputColour, myType){
 
 }
 
-function addAllMyTowerBlocks(){
-
-    console.log("addAllMyTowerBlocks(): Calling individual chunks now.");
+function addAllMyTowerBlocks(){    
 
     // Tower chunks are (from W to E and N to S): [5 13] - [11 19], total of 7x7 = 49 chunks
+
+    for (let i = 5; i <= 11; i++){
+
+        for (let j = 13; j <= 19; j++){
+
+            eval("addChunk_" + i + "_" + j + "(" + (i-5)*16+ "," + (j-13)*16 + ");");
+            load2D = load2D + 100/49;
+            load2D = parseInt(load2D);
+
+            console.log("[myFloorPlans.js] addAllMyTowerBlocks(): Loading chunks in progress: " + load2D + "% completed.");
+
+        }
+
+    }
+
+    /*
 
     addChunk_5_13(0,0);
     addChunk_6_13(1*16,0);
@@ -230,5 +244,7 @@ function addAllMyTowerBlocks(){
     addChunk_9_19(4*16,n*16);
     addChunk_10_19(5*16,n*16);
     addChunk_11_19(6*16,n*16);
+
+    */
 
 }

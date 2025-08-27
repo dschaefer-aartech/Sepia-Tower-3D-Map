@@ -14,7 +14,7 @@ function addSphere(myPos, myColour, myRadius){
 
 }
 
-function addLight(x, y, z, color){
+function addLight(x, y, z, color, myName){
 
     if (debugL0 == true){ console.log("[myTowerElements.js] addLight(" + x + ", " + y + ", " + z + ", " + color + "): Hi."); }
 
@@ -24,6 +24,7 @@ function addLight(x, y, z, color){
     const light = new THREE.DirectionalLight(color, intensity);
     // const light = new THREE.PointLight(color, intensity, distance, decay);
     light.position.set(x, y, z);
+    light.name = myName;
     scene.add(light);
 
     let myX = light.position.x;
@@ -32,6 +33,52 @@ function addLight(x, y, z, color){
 
     let myVec = new THREE.Vector3(myX, myY, myZ);
     addSphere(myVec, '#ffffff');
+
+}
+
+function setLightColouring(myColour){
+
+    console.log("[myTowerElements.js] setLightColouring(" + myColour + "): Setting colour for the four ambient light sources.");
+
+    if (myColour == "pinkblue"){
+
+        scene.getObjectByName("light1").color.r = 1;
+        scene.getObjectByName("light1").color.g = 0;
+        scene.getObjectByName("light1").color.b = 1;
+
+        scene.getObjectByName("light2").color.r = 0.0007;
+        scene.getObjectByName("light2").color.g = 0.3712;
+        scene.getObjectByName("light2").color.b = 0.6514;
+
+        scene.getObjectByName("light3").color.r = 1;
+        scene.getObjectByName("light3").color.g = 0;
+        scene.getObjectByName("light3").color.b = 1;
+
+        scene.getObjectByName("light4").color.r = 0.0007;
+        scene.getObjectByName("light4").color.g = 0.3712;
+        scene.getObjectByName("light4").color.b = 0.6514;
+
+    }
+
+    if (myColour == "white"){
+
+        scene.getObjectByName("light1").color.r = 1;
+        scene.getObjectByName("light1").color.g = 1;
+        scene.getObjectByName("light1").color.b = 1;
+
+        scene.getObjectByName("light2").color.r = 1;
+        scene.getObjectByName("light2").color.g = 1;
+        scene.getObjectByName("light2").color.b = 1;
+
+        scene.getObjectByName("light3").color.r = 1;
+        scene.getObjectByName("light3").color.g = 1;
+        scene.getObjectByName("light3").color.b = 1;
+
+        scene.getObjectByName("light4").color.r = 1;
+        scene.getObjectByName("light4").color.g = 1;
+        scene.getObjectByName("light4").color.b = 1;
+
+    }
 
 }
 
