@@ -10,10 +10,24 @@ function fiatLux(){
     addLight(9298-50,300,816+50,0xffffff);
     */
 
+    /*
     addLight(10, 10, -10, 0xffffff);
     addLight(10, 10, 10, 0xffffff);
     addLight(-10, 10, -10, 0xffffff);
     addLight(10, -10, -10, 0xffffff);
+    */
+
+    addLight(10, 10, -10, 0xff00ff);
+    addLight(10, 10, 10, 0x02a4d3);
+    addLight(-10, 10, -10, 0xff00ff);
+    addLight(10, -10, -10, 0x02a4d3);
+
+    /*
+    addLight(9420, 265, 850, 0xff00ff);
+    addLight(9270, 265, 700, 0x02a4d3);
+    */
+
+    // const light = new THREE.AmbientLight(0xff00ff, 1);
 
 }
 

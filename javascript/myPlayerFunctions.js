@@ -4,20 +4,20 @@ function addAllPlayers(){
     
     addSinglePlayer('Hyalan','#00ff00', null, null);
     addSinglePlayer('Robstar558','#ff4400', null, null);
-    addSinglePlayer('M0ost3r','#8800ff', null, null);
-    addSinglePlayer('mas123','#8800ff', null, null);
+    //addSinglePlayer('M0ost3r','#8800ff', null, null);
+    //addSinglePlayer('mas123','#8800ff', null, null);
     addSinglePlayer('fabi_gaming09', '#0000ff', null, null);
     // addSinglePlayer('Laura247', '#ff369b', null, null);
     // addSinglePlayer('NiklasPFR', '#b2ffff', null, null);
     // addSinglePlayer('McLukas1909', '#ffff00', null, null);    
     addSinglePlayer('diamit123', '#880000', null, null);
-    addSinglePlayer('Razoned', '#004400', null, null);
-    // addSinglePlayer('Preaksan', '#33c7d8', null, null);
+    //addSinglePlayer('Razoned', '#004400', null, null);
+    addSinglePlayer('Preaksan', '#33c7d8', null, null);
     // addSinglePlayer('Lunetix07', '#33c7d8', null, null);
-    addSinglePlayer('T3ipel', '#467dfd', null, null);
-    addSinglePlayer('C0nFeX787', '#836c50', null, null);
-    addSinglePlayer('SamyHilk', '#b772c2', null, null);
-    addSinglePlayer('KaterJones', '#b772c2', null, null);
+    //addSinglePlayer('T3ipel', '#467dfd', null, null);
+    //addSinglePlayer('C0nFeX787', '#836c50', null, null);
+    //addSinglePlayer('SamyHilk', '#b772c2', null, null);
+    //addSinglePlayer('KaterJones', '#b772c2', null, null);
 
     // addSinglePlayer('LookasGaming', '#ffff00', null, null); - this is Lukas' old player name
 
@@ -49,6 +49,7 @@ function addSinglePlayer(myName, myColour, myAffiliation, myGamemode){
     temp.push(myAffiliation);
     temp.push(myGamemode);
     temp.push(myVector);
+    temp.push(myY); // last known y-Position (used for updating 2D maps)
     myPlayers.push(temp);
 
     let myCallSign = myName.substring(0,3);
@@ -222,10 +223,98 @@ function startReplay(){
     if (flagTelemetry == true){ stopAJAX(); }
 
     flagReplay = true;
-    ajaxGetTelemetry("whimc_player_positions", 999999, "replay"); 
-    // ajaxGetTelemetry("TH20250215", 999999, "replay"); 
+    // ajaxGetTelemetry("whimc_player_positions", 999999, "replay"); 
+    ajaxGetTelemetry("TH20250323", 999999, "replay"); 
 
     if (BW == true){ BWRoomTally(); }
+
+}
+
+function setReplayToTimeStamp(){
+    
+    stopReplay();
+
+    let goToDateTime = myFrame.contentWindow.document.getElementById("goToDateTime").value;
+    if (goToDateTime != ''){ 
+        
+        myFrame.contentWindow.document.getElementById("goToTimestamp").value = new Date(goToDateTime).getTime()/1000 
+    
+    }
+
+    let goToTime = myFrame.contentWindow.document.getElementById("goToTimestamp").value;    
+    let goToIndex = null; 
+
+    let msg = null;
+
+    for (let i = 0; i < myTelemetry.length; i++){
+        
+        if (myTelemetry[i][0] == goToTime){
+
+            goToIndex = i;
+            break;
+
+        }
+
+    }
+
+    if (goToIndex != null){
+
+        replayTime = goToTime;
+        replayIndex = goToIndex;
+        msg = "Set replay to timestamp " + replayTime + " found at index " + replayIndex + ".";
+
+        resumeReplay();
+
+    } else {
+
+        msg = "Could not find timestamp " + goToTime + ".";
+
+    }  
+
+    console.log("[myPlayerFunctions.js] setReplayToTimeStamp(): " + msg);
+
+}
+
+function calcSyncTimes(){
+
+    let T = [null, null, null];
+    let O = [null, null, null];
+
+    let t0 = myFrame.contentWindow.document.getElementById("syncStart1").value;
+    if (t0 != ""){ t0 = new Date(t0).getTime()/1000; T[0] = t0; }
+
+    let t1 = myFrame.contentWindow.document.getElementById("syncStart2").value;
+    if (t1 != ""){ t1 = new Date(t1).getTime()/1000; T[1] = t1; }
+
+    let t2 = myFrame.contentWindow.document.getElementById("syncStart3").value;
+    if (t2 != ""){ t2 = new Date(t2).getTime()/1000; T[2] = t2; }
+
+    for (let i = 0; i < 3; i++){
+
+        if (T[i] != null){
+
+            if (T[i] <= replayTime){
+
+                let d = replayTime - T[i];
+                let x = null;
+
+                let h = Math.floor(d/3600);
+                let m = Math.floor((d-h*3600)/60);
+                let s = Math.floor((d-h*3600-m*60));
+
+                if (h < 10){ x = "0" + h + ":"; } else { x = h + ":"; }
+                if (m < 10){ x = x + "0" + m + ":"; } else { x = x + m + ":"; }
+                if (s < 10){ x = x + "0" + s; } else { x = x + s; }
+
+                let myElement = "syncTime" + (i + 1);
+
+                myFrame.contentWindow.document.getElementById(myElement).innerHTML = x;
+
+            }
+
+        }
+
+    }    
 
 }
 
@@ -238,6 +327,8 @@ function Replay(myIndex, myTime){
     if (flagReplay == true){
 
         document.getElementById("statusTimestamp").innerHTML = "<SPAN STYLE='color:#4444ff'>Replay...</SPAN>";
+        myFrame.contentWindow.document.getElementById("timestampDisplay").innerHTML = replayTime;
+        myFrame.contentWindow.document.getElementById("timeDisplay").innerHTML = new Date(replayTime*1000);
 
         if (replayIndex <= myTelemetry[0][0]){
 
@@ -260,9 +351,11 @@ function Replay(myIndex, myTime){
                 Replay(replayIndex, replayTime);
                 if (BW == true){ BWRoomTally(); }
 
-            }, 1000);
+            }, 967); // instead of 1000 ms delay before the next step is shown, we use the empirically found number of 967 ms as the engine lags about 33 ms for every 1000 ms that elapse
 
         }
+
+        calcSyncTimes();
 
     } else {
 
@@ -502,7 +595,7 @@ function updatePlayerTelemetry(myInput){
                 scene.children[sceneIndex].position.y = myNewVec.y;
                 scene.children[sceneIndex].position.z = myNewVec.z;
 
-                // This next block traces the player path
+                // This next block sets the team colours (if this option is enabled)
 
                 if (teamColoursFlag == true){
 
@@ -535,6 +628,8 @@ function updatePlayerTelemetry(myInput){
                     }
 
                 }
+
+                // This next block traces the player path
 
                 if (trackPointsFlag == true){
 
@@ -575,6 +670,34 @@ function updatePlayerTelemetry(myInput){
 
                 if (onlineFlag == true){ onlinePlayers.push(myPlayers[j][0]); }
 
+                // this next block displays the 2D floor map for the selected player
+
+                let myVec = myPlayers[j][6];
+
+                if (myPlayers[j][0] == selector2D){ 
+
+                    playerLabelColour = "#ffff00";
+                    scene.children[sceneIndex].children[0].element.style.color = playerLabelColour;
+
+                    if ((myVec.x >= 9297) && (myVec.x <= 9396) && (myVec.y >= 723) && (myVec.y <= 822)){
+                    
+                        if (myVec.z != myPlayers[j][7]){ 
+                            
+                            clear3D();
+                            displayFloorMap(myNewVec.z, true); 
+
+                        } else {
+
+                            displayFloorMap(myNewVec.z, false);
+
+                        }
+
+                    }
+               
+                    myPlayers[j][7] = myVec.z; // save vertical position
+
+                }                
+
             }
 
         }
@@ -585,7 +708,7 @@ function updatePlayerTelemetry(myInput){
 
         document.getElementById("statusTimestamp").innerHTML = "Players <SPAN STYLE='color:#00ff00'>online:</SPAN> ";
         let temp = document.getElementById("statusTimestamp").innerHTML;
-        console.log("[myPlayerFunctions.js] updatePlayerTelemetry()|onlineFlag: Currently, " + onlinePlayers.length + " players are online.");
+        // console.log("[myPlayerFunctions.js] updatePlayerTelemetry()|onlineFlag: Currently, " + onlinePlayers.length + " players are online.");
 
         for (let i = 0; i < onlinePlayers.length; i++){ 
 
@@ -598,6 +721,57 @@ function updatePlayerTelemetry(myInput){
                 temp = document.getElementById("statusTimestamp").innerHTML;
 
             }
+
+        }
+
+    }
+
+}
+
+function displayFloorMap(myY, flag3D){
+
+    // console.log("[myPlayerFunctions.js] displayFloorMap(" + myY + "): Hi.");
+    clearBlocks();   
+
+    if ((myY - 65)%7 == 5){
+        
+        displayBlocksOfCertainLevel(flag3D, myY - 1);
+        displayBlocksOfCertainLevel(flag3D, myY, "solid_white");
+
+        displayBlocksOfCertainLevel(flag3D, myY - 1, "solid_yellow", "jungle_trapdoor");
+        displayBlocksOfCertainLevel(flag3D, myY - 1, "solid_yellow", "dark_oak_trapdoor");
+
+        displayBlocksOfCertainLevel(flag3D, myY-6, "solid_pink", "andesite");
+
+    } else {
+
+        displayBlocksOfCertainLevel(flag3D, myY, "solid_white");
+
+        displayBlocksOfCertainLevel(flag3D, myY, "solid_brown", "ladder");
+        displayBlocksOfCertainLevel(flag3D, myY, "", "stone_stairs");
+        displayBlocksOfCertainLevel(flag3D, myY, "lime_green", "lime_stained_glass");
+        displayBlocksOfCertainLevel(flag3D, myY, "solid_orange", "orange_stained_glass");
+
+        displayBlocksOfCertainLevel(flag3D, myY-1, "solid_pink", "andesite");
+                
+        let lvl = Math.floor((myY - 65)/7);
+
+        if ((lvl >= 0) && (lvl <= 34)){
+
+            // myFrame.contentWindow.document.getElementById("levels").children[lvl].children[1].style.fill = "rgb(255, 255, 0)";
+            myFrame.contentWindow.document.getElementById("levels").children[lvl].children[0].style.stroke = "#ffff00";
+
+        }
+
+    } 
+    
+    for (let j = 0; j < myPlayers.length; j++){
+
+        let vec = myPlayers[j][6];
+
+        if (vec.z == myY){
+
+            addCircle(vec.x - 9295, vec.y - 719, myPlayers[j][1]);
 
         }
 

@@ -1,0 +1,95 @@
+<HTML>
+
+    <HEAD>
+        <LINK REL="STYLESHEET" HREF="myStyles.css">
+    </HEAD>
+
+
+    <BODY>
+
+        <TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+            <COLGROUP><COL><COL WIDTH="20PX"><COL WIDTH="420PX"></COLGROUP>
+            
+            <TR>
+                <TD ROWSPAN="2">
+                <P>GENERAL FUNCTIONS</P>
+                <P>
+                    <BUTTON onClick="parent.toggleRotation();">Rotate</BUTTON>
+                    <BUTTON onClick="parent.colourCodeAllPlayers();">Team Colours</BUTTON>
+                    <BUTTON onClick="parent.switchBW();">Black & White</BUTTON>
+                </P>
+                <P>
+                    <BUTTON onClick="parent.cameraFocus('Tower');">Tower</BUTTON>
+                    <BUTTON onClick="parent.cameraFocus('Pomodori');">HMS Pomodori</BUTTON>
+                    <BUTTON onClick="parent.cameraFocus('Fortress');">Fortress</BUTTON>
+                    <BUTTON onClick="parent.cameraFocus('Factory');">Factory</BUTTON>
+                </P>
+                <P>.:.</P>  
+                <P>TELEMETRY FUNCTIONS</P>
+                <P>
+                    <BUTTON onClick="parent.startAJAX();">Start AJAX()</BUTTON> 
+                    <BUTTON onClick="parent.stopAJAX();">Stop AJAX()</BUTTON>
+                </P>
+                <P>
+                    <BUTTON onClick="parent.startReplay();">Start Replay()</BUTTON> 
+                    <BUTTON onClick="parent.resumeReplay();">Resume Replay()</BUTTON>
+                    <BUTTON onClick="parent.stopReplay();">Stop Replay()</BUTTON>   
+                </P>
+                <P>.:.</P>
+                <P><SPAN ID="debug">2D Floorplan Focus on:</SPAN></P>
+                <P><SPAN ID="focus">
+                        <SELECT NAME="focusMenu" ID="focusMenu" onChange="parent.changeFocus();">
+                            <OPTION VALUE=""></OPTION>
+                            <OPTION VALUE="diamit123">diamit123</OPTION>
+                            <OPTION VALUE="Hyalan">Hyalan</OPTION>
+                            <OPTION VALUE="Robstar558">Robstar558</OPTION>
+                            <OPTION VALUE="fabi_gaming09">fabi_gaming09</OPTION>
+                            <OPTION VALUE="Preaksan">Preaksan</OPTION>
+
+                            <!-- 
+                            <OPTION VALUE="M0ost3r">M0ost3r</OPTION>                            
+                            <OPTION VALUE="Razoned">Razoned</OPTION>
+                            <OPTION VALUE="mas123">mas123</OPTION>
+                            <OPTION VALUE="T3ipel">T3ipel</OPTION>
+                            <OPTION VALUE="C0nFeX787">C0nFeX787</OPTION>
+                            <OPTION VALUE="SamyHilk">SamyHilk</OPTION>
+                            <OPTION VALUE="KaterJones">KaterJones</OPTION>
+                            //-->
+
+                        </SELECT>
+                    </SPAN></P>
+                <P>.:.</P>
+                <P>TIME INDEX FUNCTIONS</P>
+                <P>
+                    <SPAN ID="timestampDisplay" STYLE="font-size:12pt">UNIX TIME STAMP</SPAN><BR>
+                    <SPAN ID="timeDisplay">DD.MM.YYYY hh:mm:ss</SPAN>
+                </P>
+                <P>
+                    <input type="text" id="goToDateTime" size="20" placeholder="YYYY.MM.DD hh:mm:ss">
+                    <input type="text" id="goToTimestamp" size="10" placeholder="1234567890">
+                    <BUTTON onClick="parent.setReplayToTimeStamp();">SET</BUTTON>
+                </P>
+                <P>.:.</P>
+                <P>TIME SYNC FUNCTIONS</P>
+                <P>
+                    <input type="text" size="10"><input type="text" id="syncStart1" size="20" placeholder="YYYY.MM.DD hh:mm:ss"> <span id="syncTime1">hh:mm:ss</span>
+                    <br><input type="text" size="10"><input type="text" id="syncStart2" size="20" placeholder="YYYY.MM.DD hh:mm:ss"> <span id="syncTime2">hh:mm:ss</span>
+                    <br><input type="text" size="10"><input type="text" id="syncStart3" size="20" placeholder="YYYY.MM.DD hh:mm:ss"> <span id="syncTime3">hh:mm:ss</span>
+                </P>
+                </TD>
+
+                <TD ID="levelsTD" ROWSPAN="2"><SVG WIDTH="20PX" HEIGHT="20PX" ID="levels"></SVG></TD>
+                <TD ID="canvasTD"><CANVAS ID="myCanvas" HEIGHT="500PX" WIDTH="200PX" data-engine="three.js r150">
+                    I'm sorry but it appears that your browser does not support canvas elements. :/
+                </CANVAS></TD>
+            </TR>
+
+            <TR>  
+                <TD><P><SVG WIDTH="400PX" HEIGHT="400PX" ID="mySVG1"></SVG></P></TD>
+            </TR>
+
+        </TABLE>
+
+    </BODY>
+
+</HTML>

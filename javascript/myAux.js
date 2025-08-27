@@ -9,7 +9,8 @@ function getScreenRes(){
 		
 	} else {
 		
-		myFrame.src = "main_h.html?";
+		// myFrame.src = "main_h.html?";
+        myFrame.src = "video.html?";
         console.log("[myAux.js] getScreenRes(): Assigning 'main_h.html' to the iframe.");
 		
 	}
@@ -292,7 +293,7 @@ function floorIndicator(myPlayersIndex){
 
     }
 
-    console.log("[myAux.js] floorIndicator(): myVec = [" + myVec.x + ", " + myVec.y + ", " + myVec.z + "]: Player " + p[0] + " is on floor " + currentFloor + ".");
+    // console.log("[myAux.js] floorIndicator(): myVec = [" + myVec.x + ", " + myVec.y + ", " + myVec.z + "]: Player " + p[0] + " is on floor " + currentFloor + ".");
 
     let thisColour = null;
     
@@ -338,7 +339,7 @@ function floorIndicator(myPlayersIndex){
 
 function highlightFloor(myFloor, myColour){
 
-    console.log("[myAux.js] highlightFloor(" + myFloor + ", " + myColour + "): Hi!");
+    // console.log("[myAux.js] highlightFloor(" + myFloor + ", " + myColour + "): Hi!");
 
     let myZ = 65 + myFloor*7;
     addWireFrame("Floor " + myFloor, "Floor", 9305, 731, myZ, 84, 84, 5, myColour);
@@ -356,6 +357,9 @@ function dehighlightAllFloors(){
 
         myFrame.contentWindow.document.getElementById("levels").children[i].children[0].style.fill = "#555555";
         myFrame.contentWindow.document.getElementById("levels").children[i].children[1].style.fill = "#ffffff";
+        
+        myFrame.contentWindow.document.getElementById("levels").children[i].children[0].style.stroke = "none";
+        // myFrame.contentWindow.document.getElementById("levels").children[i].children[1].style.fill = "rgb(255, 255, 255)";
 
     }
 

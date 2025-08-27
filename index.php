@@ -1,7 +1,7 @@
 <HTML>
 
     <HEAD>
-        <TITLE>[MrP] Sepia Tower 3D (v304)</TITLE>
+        <TITLE>[MrP] Sepia Tower 3D (v310)</TITLE>
         <LINK REL="STYLESHEET" HREF="myStyles.css">
 
         <SCRIPT type="text/javascript" src="./javascript/myAux.js"></SCRIPT>
@@ -81,6 +81,66 @@
     <SCRIPT type="text/javascript" src="./javascript/myControls.js">/* includes all functions for interface control */</SCRIPT>
     <SCRIPT type="text/javascript" src="./javascript/jquery.min.js">/* for the AJAX contruct */</SCRIPT>
     <SCRIPT type="text/javascript" src="./javascript/BlackAndWhite.js">/* for the Black & White mode */</SCRIPT>
+
+    <SCRIPT type="text/javascript" src="./javascript/myFloorPlan.js">/* scripts for the 2D floor plan */</SCRIPT>
+
+        <!-- The tower chunks scripts -->
+
+        <SCRIPT type="text/javascript" src="chunks/chunk5-13.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-13.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-13.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-13.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-13.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-13.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-13.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk5-14.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-14.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-14.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-14.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-14.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-14.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-14.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk5-15.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-15.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-15.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-15.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-15.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-15.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-15.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk5-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-16.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk5-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-17.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk5-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-18.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk5-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-19.js"></SCRIPT>
     
     <SCRIPT>
 
@@ -138,6 +198,13 @@
         var myTD2 = null;
         var myH = null; // height for all level indicator elements
 
+        // STEP 1d: DECLARING VARIABLE TO STORE CHUNK DATA IN
+
+        var A = []; // this is where the chunk and block data extracted via Python from the region files are going to be stored
+        var selector2D = null; // in this variable we save the selection which player to focus on for the display of the 2D floor map
+        var G3D = null; // this group saves indices of blocks added to the scene as children
+        var G3Didx = null; // this is where we save the index of the group added to the scene
+
         // STEP 2: SETTING UP THE 3D ENGINE
 
         var myFrame = document.getElementById("myFrame");
@@ -177,13 +244,14 @@
                 // labelRenderer is used for applying 2D labels, based on the CSS2DRenderer addon
                 
                 console.log("[index.php] init(): Setting up CSS2DRenderer.");
-                labelRenderer = new CSS2DRenderer();           
+                labelRenderer = new CSS2DRenderer();
                 labelRenderer.domElement.style.position = "absolute";
                 labelRenderer.domElement.style.top = "10px";
                 labelRenderer.domElement.style.right = "10px";     
                 // labelRenderer.domElement.style.backgroundColor = "#ff0000"; // for debugging only
-                myFrame.contentWindow.document.getElementById("canvasTD").appendChild(labelRenderer.domElement);  
-                // document.body.appendChild(labelRenderer.domElement);                        
+                  
+                // document.body.appendChild(labelRenderer.domElement);   
+                myFrame.contentWindow.document.getElementById("canvasTD").appendChild(labelRenderer.domElement);                     
 
                 // raycasting enables detecting mouse pointer moving over 3D objects 
                 // (see above in the global variable definitions)
@@ -249,11 +317,15 @@
                 console.log("[index.php] setUpDisplays(): resizeDisplays(): Resetting canvas and SVG element widths and heights.");
 
                 let myTD1 = myFrame.contentWindow.document.getElementById("canvasTD");
-                canvas.width = parseInt(myTD1.offsetWidth - 20);
-                canvas.height = parseInt(myTD1.offsetHeight - 20);
+                let myWidth = parseInt(myTD1.offsetWidth - 20);
+                let myHeight = parseInt(myTD1.offsetHeight - 20);
+
+                canvas.width = myWidth;
+                canvas.height = myHeight;
 
                 renderer.setSize(canvas.width, canvas.height);
                 labelRenderer.setSize(parseInt(myTD1.offsetWidth - 20), parseInt(myTD1.offsetHeight - 20));  
+                // labelRenderer.setSize(canvas.width, canvas.height);
 
                 // myFrame.contentWindow.document.getElementById("debug").innerHTML = canvas.width + "x" + canvas.height;
 
@@ -299,8 +371,12 @@
 
             requestAnimationFrame(render);
             
-            startAJAX();
+            addAllMyTowerBlocks();
+
+            // startAJAX();
             // colourCodeAllPlayers();
+
+            G3D = new THREE.Group();
 
         }
 
