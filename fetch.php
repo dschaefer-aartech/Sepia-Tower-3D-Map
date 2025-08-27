@@ -10,9 +10,14 @@
 
     );
 
-    $result2 = mysqli_query($db_link, "SELECT * FROM whimc_player_positions WHERE world='world' ORDER BY time DESC LIMIT 10");
+    $table = $_GET['table'];	
+    $limit = $_GET['limit'];	
+
+    $result = mysqli_query($db_link, "SELECT * FROM $table WHERE world='world' ORDER BY time DESC LIMIT $limit");
+    /* The limit must be adapted to the expected number of players on the map. */
+
     $j = -1;                  
-    while($row = mysqli_fetch_array($result2))
+    while($row = mysqli_fetch_array($result))
     {
         $j = $j + 1;
         $d1[$j] = $row['time'];
@@ -20,7 +25,8 @@
         $d3[$j] = $row['x'];
         $d4[$j] = $row['y'];
         $d5[$j] = $row['z'];
+        $d6[$j] = $row['gamemode'];
     }
-    echo json_encode(array($d1,$d2,$d3,$d4,$d5));
+    echo json_encode(array($d1,$d2,$d3,$d4,$d5,$d6));
 
 ?>

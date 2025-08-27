@@ -1,0 +1,149 @@
+<HTML>
+
+    <HEAD>
+        <LINK REL="STYLESHEET" HREF="myStyles.css">
+    </HEAD>
+
+    <BODY>
+
+        <TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+            <COLGROUP><COL WIDTH="30%"><COL WIDTH="2%"><COL WIDTH="2%"><COL WIDTH="2%"><COL WIDTH="64%"></COLGROUP>
+
+            <TR HEIGHT="100PX">
+                <TD STYLE="padding:10px;">
+                    
+                    <TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+                        <COLGROUP><COL WIDTH="50%"><COL WIDTH="50%"></COLGROUP>
+
+                        <TR HEIGHT="10PX"><TD COLSPAN="2"></TD></TR>
+                        <TR HEIGHT="20PX"><TD COLSPAN="2"><P CLASS="section">MAIN CONTROL PANEL</P></TD></TR>
+                        <TR>
+                            <TD>
+                                <P>PANEL ONE</P>
+                                <P><SVG WIDTH="200PX" HEIGHT="20PX" ID="mySVG1"></SVG></P>
+                                <P><SPAN ID="debug"></SPAN></P>
+                            </TD>
+                            <TD>
+                                <P>PANEL TWO</P>
+                                <P><SVG WIDTH="200PX" HEIGHT="20PX" ID="mySVG2"></SVG></P>
+                            </TD>
+                        </TR>
+
+                    </TABLE>
+
+                </TD>
+                <TD ROWSPAN="4">
+                    <SVG WIDTH="20PX" HEIGHT="20PX" ID="neutrals"></SVG>
+                </TD>
+                <TD ID="levelsTD" ROWSPAN="4">
+                    <SVG WIDTH="20PX" HEIGHT="20PX" ID="levels">
+                        I'm sorry but it appears that your browser does not support svg elements. :/
+                    </SVG>
+                </TD>
+                <TD ROWSPAN="4">
+                    <SVG WIDTH="20PX" HEIGHT="20PX" ID="counters"></SVG>
+                </TD>
+                <TD ID="canvasTD" ROWSPAN="4">
+                    <CANVAS ID="myCanvas" HEIGHT="200" WIDTH="200" data-engine="three.js r150">
+                        I'm sorry but it appears that your browser does not support canvas elements. :/
+                    </CANVAS>
+                </TD>
+            </TR>
+
+            <TR HEIGHT="100PX">
+                <TD STYLE="padding:10px;">
+
+                    <TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0" CELLPADDING="0" BORDER="0">
+                        <COLGROUP><COL WIDTH="50%"><COL WIDTH="50%"></COLGROUP>
+
+                        <TR HEIGHT="10PX"><TD COLSPAN="2"></TD></TR>
+                        <TR HEIGHT="20PX"><TD COLSPAN="2"><P CLASS="section">MISSION OBJECTIVES INDICATOR</P></TD></TR>
+                        <TR>
+                            <TD>
+                                <P>OPTION A</P>
+                                <P><SVG WIDTH="200PX" HEIGHT="20PX" ID="mySVG3"></SVG></P>
+                            </TD>
+                            <TD>
+                                <P>OPTION B</P>
+                                <P><SVG WIDTH="200PX" HEIGHT="20PX" ID="mySVG4"></SVG></P>
+                            </TD>
+                        </TR>
+
+                    </TABLE>
+
+                </TD>
+            </TR>
+
+            <TR HEIGHT="100PX">
+                <TD STYLE="padding:10px;">
+
+                    <TABLE WIDTH="100%" HEIGHT="100%" CELLSPACING="0" CELLPADDING="0" BORDER="1">
+                        <COLGROUP><COL WIDTH="35%"><COL WIDTH="30%"><COL WIDTH="35%"></COLGROUP>
+
+                        <TR><TD COLSPAN="3"><P CLASS="section">BLACK & WHITE SCORE</P></TD></TR>
+
+                        <TR>
+                            <TD>
+                                <P>TEAM <STRONG>WHITE</STRONG></P>
+                                <P ID="whiteScore" STYLE="font-size:16pt;">-</P>
+                            </TD>
+                            <TD>
+                                <P STYLE="color:#0078c8;">NEUTRAL ROOMS</P>
+                                <P ID="neutralScore" STYLE="font-size:16pt; color:#0078c8;">-</P>
+                            </TD>
+                            <TD>
+                                <P>TEAM <STRONG>BLACK</STRONG></P>
+                                <P ID="blackScore" STYLE="font-size:16pt;">-</P>                                
+                            </TD>
+                        </TR>
+
+                    </TABLE>
+
+                </TD>
+            </TR>
+
+            <TR><TD>
+                <P>GENERAL FUNCTIONS</P>
+                <P>
+                    <BUTTON onClick="parent.toggleRotation();">Rotate</BUTTON>
+                    <BUTTON onClick="parent.colourCodeAllPlayers();">Team Colours</BUTTON>
+                    <BUTTON onClick="parent.switchBW();">Black & White</BUTTON>
+                </P>
+                <P>
+                    <BUTTON onClick="parent.cameraFocus('Tower');">Tower</BUTTON>
+                    <BUTTON onClick="parent.cameraFocus('Pomodori');">HMS Pomodori</BUTTON>
+                    <BUTTON onClick="parent.cameraFocus('Fortress');">Fortress</BUTTON>
+                    <BUTTON onClick="parent.cameraFocus('Factory');">Factory</BUTTON>
+                </P>
+                <P>.:.</P>  
+                <P>TELEMETRY FUNCTIONS</P>
+                <P>
+                    <BUTTON onClick="parent.startAJAX();">Start AJAX()</BUTTON> 
+                    <BUTTON onClick="parent.stopAJAX();">Stop AJAX()</BUTTON>
+                </P>
+                <P>
+                    <BUTTON onClick="parent.startReplay();">Start Replay()</BUTTON> 
+                    <BUTTON onClick="parent.resumeReplay();">Resume Replay()</BUTTON>
+                    <BUTTON onClick="parent.stopReplay();">Stop Replay()</BUTTON>   
+                </P>  
+                <P>.:.</P>
+                <P>TRAJECTORY FUNCTIONS</P>
+                <P>                    
+                    <BUTTON onClick="parent.cameraFocus('Course');">Elytra Training Course</BUTTON>                    
+                </P> 
+                <P>
+                    <BUTTON onClick="parent.toggleTracking('points')">Track Points</BUTTON>
+                    <BUTTON onClick="parent.toggleTracking('path')">Track Path</BUTTON>
+                </P> 
+                <P>
+                    <BUTTON onClick="parent.addRoom('Archive', 9326,268,737,9321,268,745, '#ffff00');">ARCHIVE</BUTTON>
+                    <BUTTON onClick="parent.addRoom('CC', 9316,156,764,9306,156,781, '#ffff00');">COMPUTER CENTRE</BUTTON>
+                </P>
+  
+            </TD></TR>
+
+        </TABLE>
+
+    </BODY>
+
+</HTML>

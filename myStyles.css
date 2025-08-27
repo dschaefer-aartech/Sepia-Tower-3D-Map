@@ -1,9 +1,12 @@
 body {
 
     color:#ffffff;
-    background-color: #080808;
+    background-color: #0b1122;
 
     font-family:'Verdana';
+
+    margin: 0;
+    padding: 0;
 
 }
 
@@ -14,11 +17,18 @@ td {
 
 }
 
+td.top, td.bottom { 
+   
+   background-color:#000000; 
+   color:#606060;    
+   vertical-align:center;   
+   font-size:6pt; }
+
 p.section {
 
-    font-weight:bold;
+    font-weight: 900;
     letter-spacing:2mm;
-    color:#404040;
+    color:#606080;
     font-size:6pt;
 
 }
@@ -62,6 +72,25 @@ rect.preselected {
 .none {
 
    fill:#555555;
+
+}
+
+.counterWarning {
+
+   fill:#ff0000;
+
+}
+
+.counterBlack {
+
+   fill:#000000;
+
+
+}
+
+.counterWhite {
+
+   fill:#ffffff;
 
 }
 
