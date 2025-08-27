@@ -1,7 +1,7 @@
 <HTML>
 
     <HEAD>
-        <TITLE>[MrP] Sepia Tower 3D (v310)</TITLE>
+        <TITLE>[MrP] Sepia Tower 3D (v310surface)</TITLE>
         <LINK REL="STYLESHEET" HREF="myStyles.css">
 
         <SCRIPT type="text/javascript" src="./javascript/myAux.js"></SCRIPT>
@@ -84,63 +84,487 @@
 
     <SCRIPT type="text/javascript" src="./javascript/myFloorPlan.js">/* scripts for the 2D floor plan */</SCRIPT>
 
-        <!-- The tower chunks scripts -->
+        <!-- chunks scripts -->
 
-        <SCRIPT type="text/javascript" src="chunks/chunk5-13.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk6-13.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk7-13.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk8-13.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk9-13.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk10-13.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk11-13.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk1-30.js"></SCRIPT>
 
-        <SCRIPT type="text/javascript" src="chunks/chunk5-14.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk6-14.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk7-14.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk8-14.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk9-14.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk10-14.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk11-14.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk2-30.js"></SCRIPT>
 
-        <SCRIPT type="text/javascript" src="chunks/chunk5-15.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk6-15.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk7-15.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk8-15.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk9-15.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk10-15.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk11-15.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk3-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk4-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk4-30.js"></SCRIPT>
 
         <SCRIPT type="text/javascript" src="chunks/chunk5-16.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk6-16.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk7-16.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk8-16.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk9-16.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk10-16.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk11-16.js"></SCRIPT>
-
         <SCRIPT type="text/javascript" src="chunks/chunk5-17.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk6-17.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk7-17.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk8-17.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk9-17.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk10-17.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk11-17.js"></SCRIPT>
-
         <SCRIPT type="text/javascript" src="chunks/chunk5-18.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk6-18.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk7-18.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk8-18.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk9-18.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk10-18.js"></SCRIPT>
-        <SCRIPT type="text/javascript" src="chunks/chunk11-18.js"></SCRIPT>
-
         <SCRIPT type="text/javascript" src="chunks/chunk5-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk5-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk6-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-18.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="chunks/chunk6-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk6-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk7-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-18.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="chunks/chunk7-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk7-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk8-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-18.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="chunks/chunk8-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk8-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk9-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-18.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="chunks/chunk9-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk9-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk10-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-18.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="chunks/chunk10-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk10-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk11-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-18.js"></SCRIPT>
         <SCRIPT type="text/javascript" src="chunks/chunk11-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk11-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk12-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk12-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk13-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk13-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk14-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk14-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk15-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk15-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk16-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk16-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk17-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk17-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk18-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk18-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk19-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk19-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk20-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk20-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk21-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk21-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk22-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk22-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk23-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk23-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk24-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk24-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk25-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk25-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk26-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk26-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk27-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk27-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk28-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk28-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk29-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk29-30.js"></SCRIPT>
+
+        <SCRIPT type="text/javascript" src="chunks/chunk30-16.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-17.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-18.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-19.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-20.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-21.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-22.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-23.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-24.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-25.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-26.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-27.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-28.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-29.js"></SCRIPT>
+        <SCRIPT type="text/javascript" src="chunks/chunk30-30.js"></SCRIPT>
     
     <SCRIPT>
 
@@ -201,6 +625,10 @@
         // STEP 1d: DECLARING VARIABLE TO STORE CHUNK DATA IN
 
         var A = []; // this is where the chunk and block data extracted via Python from the region files are going to be stored
+        var B = []; // this is the transformed array where blocks from A are read in by x and z coordinates
+        var typeOfBlocks = [];
+        var typeOfBlocksCount = [];
+
         var selector2D = null; // in this variable we save the selection which player to focus on for the display of the 2D floor map
         var G3D = null; // this group saves indices of blocks added to the scene as children
         var G3Didx = null; // this is where we save the index of the group added to the scene
@@ -229,7 +657,7 @@
 
                 // this is the position of the tower in our Minecraft world
                 // (setting the camera here enables me to render player positions with native Minecraft coordinates without transformation)
-                camera.position.set(9257, 460, -190);
+                camera.position.set(8978, -357, -195);
 
                 // we need this to align our three.js coordinate system with Minecraft's COS (as it uses N=-z and S=+z)
                 camera.up.set(0,0,-1); 
@@ -275,8 +703,8 @@
                 orbit.zoomSpeed = 1;
                 orbit.rotateSpeed = 1;
                 orbit.autoRotate = true;
-                orbit.autoRotateSpeed = .25;
-                orbit.target = new THREE.Vector3(9346.5, 772.5, -187.5); // Sepia Tower Skyscraper
+                orbit.autoRotateSpeed = 1;
+                orbit.target = new THREE.Vector3(9059,-166,-50); // 
                 // orbit.target = new THREE.Vector3(8969, -14, -102); // Elytra Flight Field
 
                 // gets relative mouse pointer coordinates, goes together with the raycaster
@@ -360,10 +788,11 @@
             // these function calls to [myTowerFunctions.js] populate the 3D scenery with all objects that do not change
             fiatLux();
             addGaugeElements();
-            addTower();
-            addPomodori();
-            addFortress();
-            addFactory();
+            
+            //addTower();
+            //addPomodori();
+            //addFortress();
+            //addFactory();
 
             // Elytra training course is not displayed by default but will only be loaded if the camera is focused on it
             // addFlightField();
@@ -371,12 +800,153 @@
 
             requestAnimationFrame(render);
             
-            addAllMyTowerBlocks();
+            //addAllMyTowerBlocks();
+            addCourseBlocks();
+
+
+            transformBlockArray();
 
             // startAJAX();
             // colourCodeAllPlayers();
 
             G3D = new THREE.Group();
+
+        }
+
+        function transformBlockArray(){
+
+            let min = [999999999, 999999999, 999999999];
+            let max = [0, 0, 0];
+
+            for (let i = 0; i < A.length; i++){
+
+                for (let j = 0; j < 3; j++){
+
+                    if (A[i][j] > max[j]){ max[j] = A[i][j]; }
+                    if (A[i][j] < min[j]){ min[j] = A[i][j]; }
+
+                }
+
+            }
+
+            // A[i][j]: j = 1 is the vertical component
+
+            //console.log("[index.php] transformBlockArray(): min=[" + min[0] + ", " + min[1] + ", " + min[2] + "].");
+            //console.log("[index.php] transformBlockArray(): max=[" + max[0] + ", " + max[1] + ", " + max[2] + "].");
+
+            for (let i = min[0]; i <= max[0]; i++){
+
+                // console.log("[index.php] transformBlockArray(): Outer loop i=" + i);
+
+                for (let j = min[2]; j <= max[2]; j++){                    
+
+                    let q = [];
+
+                    for (let m = 0; m < A.length; m++){
+
+                        if ((A[m][0] == i) && (A[m][2] == j)){ q.push(A[m]); }
+
+                    }
+
+                    let vertMax = 0;
+                    let p = null;
+
+                    for (let m = 0; m < q.length; m++){
+
+                        if (q[m][1] > vertMax){ vertMax = q[m][1]; }
+
+                    }
+
+                    for (let m = 0; m < q.length; m++){
+
+                        if (q[m][1] == vertMax){ p = q[m]; }
+
+                    }
+
+                    if (p != null){ B.push(p); }
+
+                }
+
+            }
+
+            // console.log("[index.php] transformBlockArray(): Done.");
+
+            G3D = new THREE.Group();     
+            
+            for (let i = 0; i < B.length; i++){
+
+                // console.log("[index.php] transformBlockArray(): Displaying B[" + i + "] = [" + B[i][0] + ", " + B[i][1] + ", " + B[i][2] + ", " + B[i][3] + "].");
+                // addSingleBlock(true, B[i][0], B[i][1], B[i][2], "solid_white");
+
+                let inputColour = null;
+                let inputOpacity = 1.0;
+
+                if (B[i][3] == "white_terracotta"){ inputColour = 0xd0b4a0; }
+                if (B[i][3] == "terracotta"){ inputColour = 0x995f44; }
+                if (B[i][3] == "light_gray_terracotta"){ inputColour = 0x856960; }
+                if (B[i][3] == "orange_terracotta"){ inputColour = 0xa05427; }
+                if (B[i][3] == "brown_terracotta"){ inputColour = 0x4c3224; }
+                if (B[i][3] == "yellow_terracotta"){ inputColour = 0xb78123; }
+                if (B[i][3] == "red_terracotta"){ inputColour = 0x8e3d2e; }
+
+                // if (B[i][3] == "white_stained_glass"){ inputColour = 0xffffff; }
+                // if (B[i][3] == "lime_concrete"){ inputColour = 0x00ff00; }
+
+                if (B[i][3] == "red_sand"){ inputColour = 0xbd6621; }
+
+                if (inputColour != null){ addSingleBlock(true, B[i][0], B[i][1], B[i][2], inputColour, inputOpacity); }
+
+                if (!typeOfBlocks.includes(B[i][3])){
+                    
+                    typeOfBlocks.push(B[i][3]); 
+                
+                }
+
+            }
+
+            for (let i = 0; i < A.length; i++){
+
+                let inputColour = null;
+                let inputOpacity = null;
+
+                if (A[i][3] == "white_stained_glass"){ inputColour = 0xffffff; inputOpacity = 0.2; }
+                if (A[i][3] == "lime_stained_glass"){ inputColour = 0x00ff00; inputOpacity = 0.2; }
+
+                if (A[i][3] == "light_gray_terracotta"){ inputColour = 0x856960; inputOpacity = 1.0; }
+                if (A[i][3] == "lime_concrete"){ inputColour = 0x00ff00; inputOpacity = 1.0; }
+                if (A[i][3] == "black_concrete"){ inputColour = 0x000000; inputOpacity = 1.0; }
+
+                if (A[i][3] == "verdant_froglight"){ inputColour = 0xaaffaa; inputOpacity = 1.0; }
+
+                if (inputColour != null){ addSingleBlock(true, A[i][0], A[i][1], A[i][2], inputColour, inputOpacity); }
+
+            }
+            
+            scene.add(G3D);
+
+        }
+
+        function countMyBlocks(){
+
+            for (let i = 0; i < typeOfBlocks.length; i++){
+
+                typeOfBlocksCount.push([typeOfBlocks[i], 0]);
+
+            }
+
+            for (let i = 0; i < typeOfBlocks.length; i++){
+
+                for (let j = 0; j < B.length; j++){
+
+                    if (B[j][3] == typeOfBlocks[i]){ 
+
+                        typeOfBlocksCount[i][1] = typeOfBlocksCount[i][1] + 1;
+
+                     }
+
+                }
+
+            }
 
         }
 

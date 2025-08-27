@@ -40,15 +40,15 @@ function addGaugeElements(){
     if (debugL0 == true){ console.log("[myTowerElements.js] addGaugeElement(): Adding axis helper, grid, and gauge spheres."); }
 
     axes = new THREE.AxesHelper(5.0);
-    axes.position.x = 9346.5;
-    axes.position.y = 772.5;
+    axes.position.x = 9059;
+    axes.position.y = -50;
     axes.position.z = -65;
     scene.add(axes);
 
     grid = new THREE.GridHelper(100,10,0x002044,0x202030);
     grid.rotation.x = Math.PI/2;
-    grid.position.x = 9346.5;
-    grid.position.y = 772.5;
+    grid.position.x = 9059;
+    grid.position.y = -50;
     grid.position.z = -65;
     scene.add(grid);
 

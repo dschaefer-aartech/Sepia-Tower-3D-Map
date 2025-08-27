@@ -9,8 +9,8 @@ function getScreenRes(){
 		
 	} else {
 		
-		// myFrame.src = "main_h.html?";
-        myFrame.src = "video.html?";
+		myFrame.src = "main_h.html?";
+        // myFrame.src = "video.html?";
         console.log("[myAux.js] getScreenRes(): Assigning 'main_h.html' to the iframe.");
 		
 	}
